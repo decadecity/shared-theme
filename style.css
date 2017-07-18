@@ -889,7 +889,34 @@ object {
 .gallery-columns-9 .gallery-item {
 	max-width: 11.11111%;
 }
-
 .gallery-caption {
 	display: block;
 }
+
+
+.has-post-thumbnail .entry-header {
+	background-size: cover;
+	display: block;
+	overflow: hidden;
+	height: 20rem;
+	position: relative;
+}
+.has-post-thumbnail .entry-title,
+.has-post-thumbnail .entry-meta {
+	display: inline-block;
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 0.1em;
+}
+
+.has-post-thumbnail .entry-meta {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.has-post-thumbnail .entry-title {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+}
+

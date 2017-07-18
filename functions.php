@@ -40,7 +40,10 @@ function shared_setup() {
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
+	// Enable support for Post Thumbnails, and declare two sizes.
 	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 672, 372, true );
+	add_image_size( 'twentyfourteen-full-width', 1038, 576, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -80,12 +83,20 @@ function shared_setup() {
 		'flex-height' => true,
 	) );
 
+	/*
+	 * Enable support for Post Formats.
+	 * See https://codex.wordpress.org/Post_Formats
+	 */
+	add_theme_support( 'post-formats', array(
+		'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
+	) );
 
 	// Add support for featured content.
 	add_theme_support( 'featured-content', array(
-		'featured_content_filter' => 'twentyfourteen_get_featured_posts',
+		'featured_content_filter' => 'twentyfourteen_get_featured_posts', // TODO: remove 2014
 		'max_posts' => 6,
 	) );
+
 }
 endif;
 add_action( 'after_setup_theme', 'shared_setup' );
@@ -184,25 +195,25 @@ function shared_get_featured_posts() {
 
 // Deferred load of scripts.
 function yg_defer_scripts($url) {
-    $defer_scripts = Array(
-        'navigation.js',
-        'skip-link-focus-fix',
-        'wp-embed.min.js',
-        'jquery-3.2.1.min.js',
-    );
-    foreach ( $defer_scripts as $script) {
-        if ( strpos( $url, $script) !== false ) {
-            $url .= "' defer='defer"; # XSS for fun and profit.
-            break;
-        }
-    }
-    return $url;
+		$defer_scripts = Array(
+				'navigation.js',
+				'skip-link-focus-fix.js',
+				'wp-embed.min.js',
+				'jquery.min.js',
+		);
+		foreach ( $defer_scripts as $script) {
+				if ( strpos( $url, $script) !== false ) {
+						$url .= "' defer='defer"; # XSS for fun and profit.
+						break;
+				}
+		}
+		return $url;
 }
 add_filter( 'clean_url', 'yg_defer_scripts', 11, 1 );
 
 function yg_replace_core_jquery_version() {
-    wp_deregister_script( 'jquery' );
-    // Change the URL if you want to load a local copy of jQuery from your own server.
-    wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), '3.2.1' );
+		wp_deregister_script( 'jquery' );
+		// Change the URL if you want to load a local copy of jQuery from your own server.
+		wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), '3.2.1' );
 }
 add_action( 'wp_enqueue_scripts', 'yg_replace_core_jquery_version' );
