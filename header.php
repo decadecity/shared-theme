@@ -64,10 +64,12 @@ if (
 			?>
 		</nav><!-- #site-navigation -->
 
-			<div id="search-box-toggle">Search</div>
+		<div class="search">
+			<button class="search-box-toggle" id="search-box-toggle">Search</button>
 			<div class="search-box" id="search-box">
 				<?php get_search_form(); ?>
 			</div>
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
