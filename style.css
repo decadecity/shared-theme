@@ -916,7 +916,7 @@ html {
 }
 
 .site {
-	max-width: 90rem;
+	max-width: 75rem;
 	margin: auto;
 }
 
@@ -943,6 +943,11 @@ html {
 .post.format-image,
 .post.has-post-thumbnail {
 	max-width: none;
+}
+
+/* Needs to be behind a small screen MQ */
+.entry-content {
+	padding: 0 1rem;
 }
 
 .post.format-image {
