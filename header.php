@@ -21,6 +21,7 @@ if (
       'querySelector' in document &&
       'addEventListener' in window  &&
       'classList' in document.createElement('_') &&
+      typeof Element.prototype.remove === 'function' &&
       Object.prototype.toString.call(window.operamini) !== '[object OperaMini]'
     ) {
   // Remember that we have cut the mustard to save checking again in the future.
@@ -65,7 +66,7 @@ if (
 		</nav><!-- #site-navigation -->
 
 		<div class="search">
-			<button class="search-box-toggle" id="search-box-toggle">Search</button>
+			<span id="search-box-toggle-holder"></span>
 			<div class="search-box" id="search-box">
 				<?php get_search_form(); ?>
 			</div>
