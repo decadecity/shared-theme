@@ -1028,3 +1028,15 @@ html {
 	text-align: center;
 	margin-bottom: 2rem;
 }
+
+.js .search-box {
+	display: none;
+}
+
+.search-box {
+	margin-bottom: 1rem;
+}
+
+.shown {
+	display: inherit !important;
+}

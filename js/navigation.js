@@ -104,3 +104,13 @@
 		}
 	}( container ) );
 } )();
+
+(function() {
+	if (window.yg_mustard_cut) {
+		var toggle = document.querySelector('#search-box-toggle');
+		toggle.addEventListener('click', function() {
+			document.querySelector('#search-box').classList.add('shown');
+			toggle.remove();
+		});
+	}
+}());

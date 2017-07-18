@@ -16,7 +16,19 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-
+	<script>
+if (
+      'querySelector' in document &&
+      'addEventListener' in window  &&
+      'classList' in document.createElement('_') &&
+      Object.prototype.toString.call(window.operamini) !== '[object OperaMini]'
+    ) {
+  // Remember that we have cut the mustard to save checking again in the future.
+  window.yg_mustard_cut = true;
+  // CSS hook to allow styling for an initial state when JS is enabled: https://decadecity.net/blog/2013/07/30/coping-without-javascript#css
+  document.querySelector('html').classList.add('js');
+}
+	</script>
 	<?php wp_head(); ?>
 </head>
 
@@ -51,6 +63,11 @@
 				) );
 			?>
 		</nav><!-- #site-navigation -->
+
+			<div id="search-box-toggle">Search</div>
+			<div class="search-box" id="search-box">
+				<?php get_search_form(); ?>
+			</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
