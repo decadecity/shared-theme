@@ -139,8 +139,6 @@ function shared_scripts() {
 
 	wp_enqueue_script( 'shared-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', false );
 
-	wp_enqueue_script( 'shared-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', false );
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -205,7 +203,6 @@ function shared_get_featured_posts_ids() {
 function yg_defer_scripts($url) {
 		$defer_scripts = Array(
 				'navigation.js',
-				'skip-link-focus-fix.js',
 				'wp-embed.min.js',
 				'jquery.min.js',
 		);

@@ -17,7 +17,7 @@
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'shared' ) ); ?>"><?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'shared' ), 'WordPress' );
+				printf( esc_html__( 'Powered by %s', 'shared' ), 'WordPress' );
 			?></a>
 			<span class="sep"> | </span>
 			<?php
