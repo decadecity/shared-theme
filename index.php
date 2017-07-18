@@ -37,6 +37,7 @@ get_header(); ?>
 			endif;
 
 			/* Start the Loop */
+			$featured_post_ids = shared_get_featured_posts_ids();
 			while ( have_posts() ) : the_post();
 
 				/*
@@ -44,7 +45,7 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				if ( !has_tag( 'featured' ) ) : // TODO: Find a better way to do this.
+				if ( !in_array( get_the_ID(), $featured_post_ids ) ) :
 					get_template_part( 'template-parts/content', get_post_format() );
 					?><hr class="post-separator"/><?php
 				endif;

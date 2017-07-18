@@ -193,6 +193,14 @@ function shared_get_featured_posts() {
 	return $featured_posts;
 }
 
+function shared_get_featured_posts_ids() {
+	$ids = array();
+	foreach (shared_get_featured_posts() as $post) {
+		$ids[] = $post->ID;
+	}
+	return $ids;
+}
+
 // Deferred load of scripts.
 function yg_defer_scripts($url) {
 		$defer_scripts = Array(
