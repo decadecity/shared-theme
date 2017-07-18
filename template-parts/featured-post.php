@@ -17,7 +17,9 @@
 				echo( ' style="background-image:url(' . get_the_post_thumbnail_url() .')"');
 			endif;
 	?>>
-			<?php the_title( '<h1 class="entry-title">','</h1>' ); ?>
+			<div class="entry-header__wrapper">
+				<?php the_title( '<h1 class="entry-title">','</h1>' ); ?>
+			</div>
 		</header><!-- .entry-header -->
 
 	</a>
