@@ -930,24 +930,35 @@ html {
 }
 
 .post,
-.has-post-thumbnail .entry-content,
-.entry-footer,
-.entry-header__wrapper,
 .page-header,
 .widget-area,
+.has-post-thumbnail .entry-content,
+.has-post-thumbnail .entry-footer,
 .site-main .navigation {
-	max-width: 35rem;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 0 1rem;
 }
 .post.format-image,
 .post.has-post-thumbnail {
 	max-width: none;
+	padding: 0;
 }
 
-/* Needs to be behind a small screen MQ */
-.entry-content {
-	padding: 0 1rem;
+@media (min-width: 47em) {
+	.post,
+	.has-post-thumbnail .entry-content,
+	.has-post-thumbnail .entry-footer,
+	.entry-footer,
+	/*.entry-header__wrapper,*/
+	.page-header,
+	.widget-area,
+	.site-main .navigation {
+		max-width: 35rem;
+		padding: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 .post.format-image {
