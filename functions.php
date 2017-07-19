@@ -135,7 +135,6 @@ add_action( 'widgets_init', 'shared_widgets_init' );
  * Enqueue scripts and styles.
  */
 function shared_scripts() {
-	wp_enqueue_style( 'shared-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'shared-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', false );
 

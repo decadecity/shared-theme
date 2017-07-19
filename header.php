@@ -30,6 +30,7 @@ if (
   document.querySelector('html').classList.add('js');
 }
 	</script>
+	<style><?php echo(file_get_contents( get_template_directory() . '/style.css' ) );?></style>
 	<?php wp_head(); ?>
 </head>
 
