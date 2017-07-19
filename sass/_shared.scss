@@ -1,0 +1,158 @@
+
+/* My horrible hacking */
+html {
+	font-size: 100%;
+}
+
+@media (max-width:13.75em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (min-width:40em) {
+  html {
+    font-size: 125%;
+  }
+}
+
+@media (min-width:60) {
+  html {
+    font-size: 133%;
+  }
+}
+
+.site {
+	max-width: 75rem;
+	margin: auto;
+}
+
+.widget-area {
+	font-size: 75%;
+}
+
+.post {
+	margin-bottom: 3rem;
+	padding-bottom: 1rem;
+}
+
+.post,
+.page-header,
+.widget-area,
+.has-post-thumbnail .entry-content,
+.has-post-thumbnail .entry-footer,
+.site-main .navigation {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 1rem;
+}
+.post.format-image,
+.post.has-post-thumbnail {
+	max-width: none;
+	padding: 0;
+}
+
+@media (min-width: 47em) {
+	.post,
+	.has-post-thumbnail .entry-content,
+	.has-post-thumbnail .entry-footer,
+	.entry-footer,
+	/*.entry-header__wrapper,*/
+	.page-header,
+	.widget-area,
+	.site-main .navigation {
+		max-width: 35rem;
+		padding: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.post.format-image {
+	text-align: center;
+}
+.post img {
+	width: 100%;
+}
+
+.post-separator {
+	width: 30rem;
+}
+
+.format-image .entry-header__wrapper,
+.has-post-thumbnail .entry-header__wrapper {
+	position: relative;
+}
+
+.has-post-thumbnail .entry-header {
+	background-size: cover;
+	display: block;
+	overflow: hidden;
+	height: 20rem;
+	background-position: center center;
+}
+
+.format-image .entry-title,
+.has-post-thumbnail .entry-title {
+	display: inline-block;
+	background-color: rgba(255, 255, 255, 0.66);
+	padding: 0.1em 0.5em;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+}
+
+.entry-title {
+	text-transform: uppercase;
+	font-weight: 4s00;
+	font-size: 1.5rem;
+	color: black;
+	a {
+		color: black;
+		text-decoration: none;
+	}
+}
+
+.format-image p {
+	margin: 0;
+}
+
+.featured-content-inner {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.featured-content .post {
+	width: 100%;
+	margin-bottom: 0;
+	padding: 0;
+	@media (min-width: 50em) {
+		width: 50%;
+	}
+}
+
+.site-header,
+.site-title a {
+	background-color: black;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.js .search-box {
+	display: none;
+}
+.js .search {
+	height: 1.7rem;
+}
+
+.search {
+	margin-bottom: 1rem;
+}
+
+.shown {
+	display: inherit !important;
+}
