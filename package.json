@@ -1,0 +1,24 @@
+{
+	"name": "shared-theme",
+	"version": "1.0.0",
+	"description": "Shared WP theme",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"css": "node-sass --output-style compressed style.scss -o .",
+		"css:watch": "npm run css && node-sass --output-style compressed style.scss -wo ."
+	},
+	"devDependencies": {
+		"node-sass": "^3.4.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/decadecity/shared-theme.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/decadecity/shared-theme/issues"
+	},
+	"homepage": "https://github.com/decadecity/shared-theme#readme"
+}
