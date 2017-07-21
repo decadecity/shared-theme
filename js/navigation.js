@@ -104,18 +104,3 @@
 		}
 	}( container ) );
 } )();
-
-(function() {
-	if (window.yg_mustard_cut) {
-		var search = document.querySelector('#search-box-toggle-holder');
-		if (!search) {
-			return;
-		}
-		search.innerHTML = '<button id="search-box-toggle">Search</button>';
-		var toggle = document.querySelector('#search-box-toggle');
-		toggle.addEventListener('click', function() {
-			document.querySelector('#search-box').classList.add('shown');
-			toggle.remove();
-		});
-	}
-}());

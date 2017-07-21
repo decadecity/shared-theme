@@ -136,7 +136,9 @@ add_action( 'widgets_init', 'shared_widgets_init' );
  */
 function shared_scripts() {
 
-	wp_enqueue_script( 'shared-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', false );
+	if ( wp_get_nav_menu_items( 'menu-1' ) ) {
+		wp_enqueue_script( 'shared-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', false );
+	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

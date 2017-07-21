@@ -30,6 +30,7 @@ if (
   document.querySelector('html').classList.add('js');
 }
 	</script>
+	<?php /* Inline the stylesheet for speed and profit. */ ?>
 	<style><?php echo(file_get_contents( get_template_directory() . '/style.css' ) );?></style>
 	<?php wp_head(); ?>
 </head>
@@ -56,6 +57,8 @@ if (
 			endif; ?>
 		</div><!-- .site-branding -->
 
+		<?php
+		if ( wp_get_nav_menu_items( 'menu-1' ) ) : ?>
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'shared' ); ?></button>
 			<?php
@@ -65,6 +68,8 @@ if (
 				) );
 			?>
 		</nav><!-- #site-navigation -->
+		<?php
+		endif; ?>
 
 		<div class="search">
 			<span id="search-box-toggle-holder"></span>
@@ -72,6 +77,7 @@ if (
 				<?php get_search_form(); ?>
 			</div>
 		</div>
+		<script><?php echo(file_get_contents( get_template_directory() . '/js/search.js' ) );?></script>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
