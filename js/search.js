@@ -1,10 +1,5 @@
 (function() {
 	if (window.yg_mustard_cut) {
-		if (document.readyState !== 'loading') {
-			readyRunner();
-		} else {
-			document.addEventListener('DOMContentLoaded', readyRunner, false);
-		}
 		function readyRunner() {
 			var search = document.querySelector('#search-box-toggle-holder');
 			if (!search) {
@@ -16,6 +11,12 @@
 				document.querySelector('#search-box').classList.add('shown');
 				toggle.remove();
 			});
+		}
+
+		if (document.readyState !== 'loading') {
+			readyRunner();
+		} else {
+			document.addEventListener('DOMContentLoaded', readyRunner, false);
 		}
 	}
 }());

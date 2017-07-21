@@ -220,6 +220,6 @@ add_filter( 'clean_url', 'yg_defer_scripts', 11, 1 );
 function yg_replace_core_jquery_version() {
 		wp_deregister_script( 'jquery' );
 		// Change the URL if you want to load a local copy of jQuery from your own server.
-		wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), '3.2.1' );
+		wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), '3.2.1', true );
 }
 add_action( 'wp_enqueue_scripts', 'yg_replace_core_jquery_version' );
