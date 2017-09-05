@@ -2,6 +2,8 @@
 # Typography
 --------------------------------------------------------------*/
 
+$font: sans-serif !default;
+
 body,
 button,
 input,
@@ -9,7 +11,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: $font;
 	line-height: 1.5;
 }
 
