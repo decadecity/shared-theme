@@ -37,6 +37,7 @@ html {
 }
 
 .post,
+.page,
 .page-header,
 .widget-area,
 .has-post-thumbnail .entry-content,
@@ -54,6 +55,7 @@ html {
 
 @media (min-width: 47em) {
 	.post,
+	.page,
 	.has-post-thumbnail .entry-content,
 	.has-post-thumbnail .entry-footer,
 	.entry-footer,
