@@ -7,6 +7,13 @@
  * @package shared
  */
 
+/*
+ * HIC SVNT DRACONES
+ */
+function is_bob_diary() {
+	return (bool) stristr( get_bloginfo( $show, 'name' ), 'battle' );
+}
+
 if ( ! function_exists( 'shared_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -237,4 +244,11 @@ foreach ( array( 'pre_term_description' ) as $filter ) {
 
 foreach ( array( 'term_description' ) as $filter ) {
 	remove_filter( $filter, 'wp_kses_data' );
+}
+
+add_filter( 'pre_get_posts', 'reverse_post_order_pre_get_posts' );
+function reverse_post_order_pre_get_posts( $query ) {
+        if (is_bob_diary() && $query->is_main_query() ) {
+                $query->set( 'order', 'ASC' );
+        }
 }
