@@ -161,3 +161,43 @@ html {
 .shown {
 	display: inherit !important;
 }
+
+.edit-link {
+	margin-top: 0.5rem;
+}
+
+.post-edit-link {
+	padding: 0.5em 0.75em;
+	background-color: #23282d;
+	color: whitesmoke !important;
+	text-decoration: none;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+
+	&::before {
+		content: "\f464";
+		font: 400 20px/1 dashicons;
+		color: #a0a5aa;
+		padding-right: 0.25em;
+		top: 0.2em;
+		position: relative;
+	}
+}
+
+.entry-footer {
+	font-size: 0.75rem;
+	margin-top: 1rem;
+}
+
+.tags-links, .tagcloud {
+	a {
+		font-family: sans-serif;
+		background-color: black;
+		color: whitesmoke;
+		text-decoration: none;
+		padding: 0.25em 0.5em;
+		font-weight: bold;
+		white-space: nowrap;
+		line-height: 2em;
+	}
+}
+
