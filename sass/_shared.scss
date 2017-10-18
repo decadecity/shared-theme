@@ -189,6 +189,8 @@ html {
 }
 
 .tags-links, .tagcloud {
+	overflow: hidden;
+
 	a {
 		font-family: sans-serif;
 		background-color: black;
