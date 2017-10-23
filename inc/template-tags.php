@@ -53,7 +53,7 @@ function shared_entry_footer() {
 		if ( $categories_list ) {
 			/* translators: 1: list of categories. */
 			if (is_bob_diary()) {
-				$categories = 'Sources';
+				$categories = 'Sources: ';
 			} else {
 				$categories = 'Posted in';
 			}
