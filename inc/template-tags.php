@@ -52,7 +52,12 @@ function shared_entry_footer() {
 		$categories_list = get_the_category_list( esc_html__( ', ', 'shared' ) );
 		if ( $categories_list ) {
 			/* translators: 1: list of categories. */
-			printf( '<div class="cat-links">' . esc_html__( 'Posted in %1$s', 'shared' ) . '</div>', $categories_list ); // WPCS: XSS OK.
+			if (is_bob_diary()) {
+				$categories = 'Sources';
+			} else {
+				$categories = 'Posted in';
+			}
+			printf( '<div class="cat-links">' . esc_html__( $categories . ' %1$s', 'shared' ) . '</div>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
