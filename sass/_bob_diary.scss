@@ -4,4 +4,36 @@
 	.entry-date {
 		display: initial;
 	}
+
+	tbody {
+		font-family: monospace;
+		white-space: pre;
+	}
+
+	th, td {
+		padding: 0.5em;
+	}
+
+	th {
+		font-weight: normal;
+		font-size: 0.75em;
+		border: 1px solid;
+
+		&:first-of-type {
+			border-left: 0;
+		}
+		&:last-of-type {
+			border-right: 0;
+		}
+	}
+
+	td {
+		border-left: 1px solid;
+		border-bottom: 1px solid whitesmoke;
+		padding-bottom: 0;
+
+		&:first-of-type {
+			border-left: 0;
+		}
+	}
 }
