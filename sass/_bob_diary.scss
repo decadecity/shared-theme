@@ -6,7 +6,8 @@
 	}
 }
 
-.tag-form-541 {
+.tag-form-541,
+.tag-form-540 {
 	tbody {
 		font-family: monospace;
 		white-space: pre;
@@ -33,9 +34,14 @@
 		border-left: 1px solid;
 		border-bottom: 1px solid whitesmoke;
 		padding-bottom: 0;
+		vertical-align: top;
 
 		&:first-of-type {
 			border-left: 0;
 		}
+	}
+
+	.form-540__events {
+		white-space: normal;
 	}
 }
