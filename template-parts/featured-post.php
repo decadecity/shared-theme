@@ -14,7 +14,7 @@
 		<header class="entry-header"<?php
 			// Output the featured image.
 			if ( has_post_thumbnail() ) :
-				echo( ' style="background-image:url(' . get_the_post_thumbnail_url() .')"');
+				echo( ' style="background-image:url(' . get_the_post_thumbnail_url('large') .')"');
 			endif;
 	?>>
 			<div class="entry-header__wrapper">
