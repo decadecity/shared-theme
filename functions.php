@@ -224,12 +224,6 @@ function yg_defer_scripts($url) {
 }
 add_filter( 'clean_url', 'yg_defer_scripts', 11, 1 );
 
-function yg_replace_core_jquery_version() {
-		wp_deregister_script( 'jquery' );
-		wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), '3.2.1', true );
-}
-add_action( 'wp_enqueue_scripts', 'yg_replace_core_jquery_version' );
-
 // REMOVE WP EMOJI
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
