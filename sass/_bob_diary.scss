@@ -1,5 +1,15 @@
 .battle-of-britain-diary {
 	font-family: serif;
+
+	.post {
+		h2 {
+			margin-bottom: 0;
+		}
+
+		.format-aside .entry-content {
+			margin-top: 0;
+		}
+	}
 }
 
 .tag-form-541,
@@ -16,7 +26,7 @@
 	th {
 		font-weight: normal;
 		font-size: 0.75em;
-		border: 1px solid;
+		border: 0.0625em solid;
 
 		&:first-of-type {
 			border-left: 0;
@@ -27,8 +37,8 @@
 	}
 
 	td {
-		border-left: 1px solid;
-		border-bottom: 1px solid whitesmoke;
+		border-left: 0.0625em solid;
+		border-bottom: 0.0625em solid whitesmoke;
 		padding-bottom: 0;
 		vertical-align: top;
 
