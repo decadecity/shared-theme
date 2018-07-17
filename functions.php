@@ -242,7 +242,16 @@ foreach ( array( 'term_description' ) as $filter ) {
 
 add_filter( 'pre_get_posts', 'reverse_post_order_pre_get_posts' );
 function reverse_post_order_pre_get_posts( $query ) {
-        if (is_bob_diary() && $query->is_main_query() ) {
-                $query->set( 'order', 'ASC' );
-        }
+		if (is_bob_diary() && $query->is_main_query() ) {
+						$query->set( 'order', 'ASC' );
+		}
 }
+
+function enque_admin_scripts($hook) {
+	if ('edit.php' === $hook) {
+		if (is_bob_diary()) {
+			wp_enqueue_script('bob_post_admin', plugin_dir_url(__FILE__) . '/js/bob_post_admin.js');
+		}
+	}
+}
+add_action('admin_enqueue_scripts', 'enque_admin_scripts');
