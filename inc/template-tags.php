@@ -18,7 +18,7 @@ function shared_posted_on() {
 		$posted = 'Date: ';
 		if ( get_the_time( 'Hi' ) !== '1200' && get_the_time( 'Hi' ) !== '0000' ) {
 			$published_time = get_the_date() . ' ' . get_the_time() . 'h';
-		)
+		}
 	} else {
 		$posted = 'Posted on';
 	}
