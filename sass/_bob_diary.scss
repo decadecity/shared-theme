@@ -26,8 +26,12 @@
 	blockquote {
 		background-color: whitesmoke;
 		border-left: 0.625em solid #ccc;
-		margin-left: -1em;
+
+		margin-right: 0;
 		margin-bottom: 1.5em;
+		margin-left: -1em;
+
+		padding-left: 1em;
 	}
 }
 
