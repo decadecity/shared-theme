@@ -53,12 +53,6 @@
 
 	th, td {
 		padding: 0.5em;
-	}
-
-	th {
-		font-weight: normal;
-		font-size: 0.75em;
-		border: 0.0625em solid;
 
 		&:first-of-type {
 			border-left: 0;
@@ -68,20 +62,22 @@
 		}
 	}
 
+	th {
+		font-weight: normal;
+		font-size: 0.75em;
+		border: 0.0625em solid;
+	}
+
 	td {
 		border-left: 0.0625em solid;
 		border-bottom: 0.0625em solid whitesmoke;
 		padding-bottom: 0;
 		vertical-align: top;
-
-		&:first-of-type {
-			border-left: 0;
-		}
 	}
 }
 
 .handwritten {
 	font-family: cursive !important;
 	white-space: normal !important;
-	color: #000140;
+	color: #000140 !important;
 }
