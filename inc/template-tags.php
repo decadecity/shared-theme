@@ -14,10 +14,10 @@ if ( ! function_exists( 'shared_posted_on' ) ) :
 function shared_posted_on() {
 	if (is_bob_diary()) {
 		$posted = 'Date: ';
-		$published_time = get_the_date() . ' ' . get_the_time() . 'h'
+		$published_time = get_the_date() . ' ' . get_the_time() . 'h';
 	} else {
 		$posted = 'Posted on';
-		$published_time = get_the_date()
+		$published_time = get_the_date();
 	}
 
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
