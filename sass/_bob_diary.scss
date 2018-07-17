@@ -15,14 +15,17 @@
 		}
 	}
 
-	.entry-date,
-	.entry-footer {
-		font-size: 0.75rem;
-		font-family: sans-serif;
+	.entry-header .entry-date {
+		display: none;
 	}
 
 	.entry-content {
 		color: black;
+	}
+
+	.entry-footer {
+		font-size: 0.75rem;
+		font-family: sans-serif;
 	}
 
 	blockquote {
