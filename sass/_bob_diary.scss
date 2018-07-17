@@ -3,6 +3,7 @@
 
 	.post {
 		h2 {
+			font-size: 1.5em;
 			margin-bottom: 0;
 			text-transform: none;
 		}
@@ -10,6 +11,23 @@
 		.format-aside .entry-content {
 			margin-top: 0;
 		}
+	}
+
+	.entry-date,
+	.entry-footer {
+		font-size: 0.75rem;
+		font-family: sans-serif;
+	}
+
+	.entry-content {
+		color: black;
+	}
+
+	blockquote {
+		background-color: whitesmoke;
+		border-left: 0.625em solid #ccc;
+		margin-left: -1em;
+		margin-bottom: 1.5em;
 	}
 }
 
