@@ -12,12 +12,15 @@ if ( ! function_exists( 'shared_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function shared_posted_on() {
+
+	$published_time = get_the_date();
 	if (is_bob_diary()) {
 		$posted = 'Date: ';
-		$published_time = get_the_date() . ' ' . get_the_time() . 'h';
+		if ( get_the_time( 'Hi' ) !== '1200' && get_the_time( 'Hi' ) !== '0000' ) {
+			$published_time = get_the_date() . ' ' . get_the_time() . 'h';
+		)
 	} else {
 		$posted = 'Posted on';
-		$published_time = get_the_date();
 	}
 
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
