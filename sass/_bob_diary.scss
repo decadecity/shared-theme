@@ -2,13 +2,15 @@
 	font-family: serif;
 
 	.post {
+		margin-bottom: 1.75rem;
+
 		h2 {
 			font-size: 1.25em;
 			margin-bottom: 0;
 			text-transform: none;
 		}
 
-		.format-aside .entry-content {
+		&.format-aside .entry-content {
 			margin-top: 0;
 		}
 	}
@@ -32,6 +34,10 @@
 		margin-left: -1em;
 
 		padding-left: 0.375em;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 }
 
